@@ -6,6 +6,7 @@ const typeDefs = gql`
     year: Int
   }
   type Query {
+    id: Int
     movies: [Movie]
     movie: Movie
   }
