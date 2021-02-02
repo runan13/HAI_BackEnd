@@ -4,8 +4,8 @@ Instagram Clone Backend
 
 ## User:
 
-- [ ] Create Account
-- [ ] see Profile
+- [x] Create Account
+- [x] see Profile
 - [ ] Login
 - [ ] Edit Profile
 - [ ] Follow User
