@@ -7,7 +7,7 @@ Instagram Clone Backend
 - [x] Create Account
 - [x] see Profile
 - [x] Login
-- [ ] Edit Profile
+- [x] Edit Profile
+- [x] Change Avatar (Image Upload)
 - [ ] Follow User
 - [ ] Unfollow User
-- [ ] Change Avatar (Image Upload)
