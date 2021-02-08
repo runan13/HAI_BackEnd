@@ -11,5 +11,15 @@ export default gql`
     updatedAt: String!
     bio: String
     avatar: String
+    following: [User]
+    followers: [User]
+    spo2: [Spo2]
+  }
+
+  type Spo2 {
+    id: String!
+    maxSpo2: String!
+    minSpo2: String!
+    ownUser: [User]
   }
 `;

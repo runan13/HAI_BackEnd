@@ -21,6 +21,15 @@ model User {
   avatar    String?
   followers User[]   @relation("FollowRelation", references: [id])
   following User[]   @relation("FollowRelation", references: [id])
+  spo2      Spo2[]   @relation("Spo2Relation", references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Spo2 {
+  id        Int      @id @default(autoincrement())
+  ownUser   User[]   @relation("Spo2Relation", references: [id])
+  minSpo2   String
+  maxSpo2   String
+  createdAt DateTime @default(now())
 }

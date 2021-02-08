@@ -9,5 +9,8 @@ Instagram Clone Backend
 - [x] Login
 - [x] Edit Profile
 - [x] Change Avatar (Image Upload)
-- [ ] Follow User
-- [ ] Unfollow User
+- [x] Follow User
+- [x] Unfollow User
+- [ ] see Followers
+- [ ] see Followings
+- [ ] Search Users
