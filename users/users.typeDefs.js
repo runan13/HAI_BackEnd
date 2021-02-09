@@ -14,6 +14,10 @@ export default gql`
     following: [User]
     followers: [User]
     spo2: [Spo2]
+    totalFollowing: Int!
+    totalFollowers: Int!
+    isFollowing: Boolean!
+    isMe: Boolean!
   }
 
   type Spo2 {
