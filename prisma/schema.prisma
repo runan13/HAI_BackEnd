@@ -21,15 +21,36 @@ model User {
   avatar    String?
   followers User[]   @relation("FollowRelation", references: [id])
   following User[]   @relation("FollowRelation", references: [id])
-  spo2      Spo2[]   @relation("Spo2Relation", references: [id])
+  spo2s     Spo2[]
+  photos    Photo[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model Spo2 {
   id        Int      @id @default(autoincrement())
-  ownUser   User[]   @relation("Spo2Relation", references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
   minSpo2   String
   maxSpo2   String
   createdAt DateTime @default(now())
+}
+
+model Photo {
+  id        Int       @id @default(autoincrement())
+  user      User      @relation(fields: [userId], references: [id])
+  userId    Int
+  file      String
+  caption   String?
+  hashtags  Hashtag[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Hashtag {
+  id        Int      @id @default(autoincrement())
+  hashtag   String
+  photos    Photo[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

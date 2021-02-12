@@ -11,6 +11,7 @@ Instagram Clone Backend
 - [x] Change Avatar (Image Upload)
 - [x] Follow User
 - [x] Unfollow User
-- [ ] see Followers
-- [ ] see Followings
-- [ ] Search Users
+- [x] see Followers
+- [x] see Followings
+- [x] Computed Fields
+- [x] Search Users

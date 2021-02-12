@@ -19,11 +19,4 @@ export default gql`
     isFollowing: Boolean!
     isMe: Boolean!
   }
-
-  type Spo2 {
-    id: String!
-    maxSpo2: String!
-    minSpo2: String!
-    ownUser: [User]
-  }
 `;
