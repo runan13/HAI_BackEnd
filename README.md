@@ -24,5 +24,5 @@ Instagram Clone Backend
 - [x] search Photo
 - [x] Edit Photo
 - [x] Like / Unlike Photo
-- [ ] see Photo Likes
+- [x] see Photo Likes
 - [ ] See Feed
