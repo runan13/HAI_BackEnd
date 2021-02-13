@@ -15,3 +15,14 @@ Instagram Clone Backend
 - [x] see Followings
 - [x] Computed Fields
 - [x] Search Users
+
+## Photo: 
+
+- [ ] Upload Photo
+- [ ] see Photo
+- [ ] see Hashtags
+- [ ] search Photo
+- [ ] Edit Photo
+- [ ] Like / Unlike Photo
+- [ ] see Photo Likes
+- [ ] See Feed

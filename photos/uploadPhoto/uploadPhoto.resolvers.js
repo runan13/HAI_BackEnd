@@ -1,6 +1,7 @@
 import { hash } from "bcrypt";
 import client from "../../client";
 import { protectResolver } from "../../users/users.utility";
+import { processHashtag } from "../photos.utility";
 
 export default {
   Mutation: {
@@ -8,13 +9,8 @@ export default {
       async (_, { file, caption }, { loggedInUser }) => {
         let hashtagObj = [];
         if (caption) {
-          // parse caption
-          const hashtags = caption.match(/#[\w]+/g);
-          hashtagObj = hashtags.map((hashtag) => ({
-            where: { hashtag },
-            create: { hashtag },
-          }));
-          console.log(hashtagObj);
+          // parse caption\
+          hashtagObj = processHashtag(caption);
           // get or create Hashtags
         }
         return client.photo.create({
