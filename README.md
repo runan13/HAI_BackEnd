@@ -18,11 +18,11 @@ Instagram Clone Backend
 
 ## Photo: 
 
-- [ ] Upload Photo
-- [ ] see Photo
-- [ ] see Hashtags
-- [ ] search Photo
-- [ ] Edit Photo
-- [ ] Like / Unlike Photo
+- [x] Upload Photo
+- [x] see Photo
+- [x] see Hashtags
+- [x] search Photo
+- [x] Edit Photo
+- [x] Like / Unlike Photo
 - [ ] see Photo Likes
 - [ ] See Feed
