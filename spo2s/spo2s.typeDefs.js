@@ -4,8 +4,9 @@ export default gql`
   type Spo2 {
     id: Int!
     user: User!
-    minSpo2: String!
-    maxSpo2: String!
+    minSpo2: Float!
+    avgSpo2: Float!
+    maxSpo2: Float!
     createdAt: String!
   }
 `;

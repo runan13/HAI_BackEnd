@@ -32,8 +32,9 @@ model Spo2 {
   id        Int      @id @default(autoincrement())
   user      User     @relation(fields: [userId], references: [id])
   userId    Int
-  minSpo2   String
-  maxSpo2   String
+  minSpo2   Float
+  avgSpo2   Float
+  maxSpo2   Float
   createdAt DateTime @default(now())
 }
 
