@@ -8,5 +8,6 @@ export default gql`
     avgSpo2: Float!
     maxSpo2: Float!
     createdAt: String!
+    isMine: Boolean!
   }
 `;
