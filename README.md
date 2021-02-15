@@ -32,4 +32,4 @@ Instagram Clone Backend
 ## comment:
 - [x] Comment on Photo
 - [x] isMine (Delete Comment)
-- [ ] Edit Comment
+- [x] Edit Comment
