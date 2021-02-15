@@ -25,4 +25,11 @@ Instagram Clone Backend
 - [x] Edit Photo
 - [x] Like / Unlike Photo
 - [x] see Photo Likes
-- [ ] See Feed
+- [x] see Photo Comments
+- [x] See Feed
+- [ ] isMine (Delete Photo)
+
+## comment:
+- [ ] Comment on Photo
+- [ ] Edit Comment
+- [ ] isMine (Delete Comment)
