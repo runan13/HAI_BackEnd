@@ -41,6 +41,6 @@ Instagram Clone Backend
 - [x] See Rooms
 - [x] Send Message (Create Room)
 - [x] See Room
-- [ ] Computed Fields
-- [ ] Realtime Messages
+- [x] Computed Fields
+- [x] Realtime Messages
 
