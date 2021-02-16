@@ -10,7 +10,7 @@ export default {
           baseURL: "http://211.48.56.72:8080/app/",
         });
         const getSpo2 = () =>
-          spo2API.get(`/${loggedInUser.username}2021-02-14`);
+          spo2API.get(`/${loggedInUser.username}2021-02-15`);
 
         const { data: spo2 } = await getSpo2();
 

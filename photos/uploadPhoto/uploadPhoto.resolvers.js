@@ -1,5 +1,6 @@
 import { hash } from "bcrypt";
 import client from "../../client";
+import { uploadToS3 } from "../../shared/shared.utility";
 import { protectResolver } from "../../users/users.utility";
 import { processHashtag } from "../photos.utility";
 
@@ -13,9 +14,10 @@ export default {
           hashtagObj = processHashtag(caption);
           // get or create Hashtags
         }
+        const fileUrl = await uploadToS3(file, loggedInUser.id, "uploads");
         return client.photo.create({
           data: {
-            file,
+            file: fileUrl,
             caption,
             user: {
               connect: {

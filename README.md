@@ -33,3 +33,6 @@ Instagram Clone Backend
 - [x] Comment on Photo
 - [x] isMine (Delete Comment)
 - [x] Edit Comment
+
+## AWS S3 Upload:
+- [x] AWS S3 Image Upload
