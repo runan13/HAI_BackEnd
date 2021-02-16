@@ -38,8 +38,8 @@ Instagram Clone Backend
 - [x] AWS S3 Image Upload
 
 ## Direct Messages
-- [ ] Create Room
-- [ ] Get Room
+- [x] See Room
+- [ ] Send Message (Create Room)
 - [ ] Send Message
 - [ ] Realtime Messages
 
