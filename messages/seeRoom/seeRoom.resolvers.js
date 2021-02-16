@@ -4,7 +4,7 @@ import { protectResolver } from "../../users/users.utility";
 export default {
   Query: {
     seeRoom: protectResolver(async (_, { id }, { loggedInUser }) =>
-      client.room.findUnique({
+      client.room.findFirst({
         where: {
           id,
           users: {
