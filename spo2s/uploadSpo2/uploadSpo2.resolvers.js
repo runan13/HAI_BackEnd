@@ -5,12 +5,13 @@ import { protectResolver } from "../../users/users.utility";
 export default {
   Mutation: {
     uploadSpo2: protectResolver(async (_, { username }, { loggedInUser }) => {
+      console.log(username);
       if (username === loggedInUser.username) {
         const spo2API = axios.create({
-          baseURL: "http://211.48.56.72:8080/app/",
+          baseURL: "http://49.161.233.162:8080/app/",
         });
         const getSpo2 = () =>
-          spo2API.get(`/${loggedInUser.username}2021-02-15`);
+          spo2API.get(`/${loggedInUser.username}2021-03-13`);
 
         const { data: spo2 } = await getSpo2();
 

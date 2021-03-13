@@ -10,7 +10,7 @@ export default {
         include: {
           following: true,
           followers: true,
-          spo2: true,
+          spo2s: true,
         },
       }),
   },
