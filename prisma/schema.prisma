@@ -38,6 +38,8 @@ model Spo2 {
   minSpo2   Float
   avgSpo2   Float
   maxSpo2   Float
+  bpUp      Int[]
+  bpDown    Int[]
   createdAt DateTime @default(now())
 }
 

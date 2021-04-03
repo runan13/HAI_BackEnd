@@ -7,6 +7,8 @@ export default gql`
     minSpo2: Float!
     avgSpo2: Float!
     maxSpo2: Float!
+    bpUp: [Int]
+    bpDown: [Int]
     createdAt: String!
     isMine: Boolean!
   }
