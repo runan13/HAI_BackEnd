@@ -19,24 +19,50 @@ export default {
           ],
         },
       };
-      // SpO2 Data 90 미만 제거 후 평균 계산
-      let spo2Sum = 0;
-      let spo2ValueCount = 0;
-      const testavgspo2 = testJson.spo2_data.spo2.map((sp) => {
-        if (sp > 90) {
-          spo2ValueCount++;
-          spo2Sum += sp;
-          return spo2Sum;
-        }
-      });
+      // 배열 정렬 함수
+      const sortArray = (a, b) => b - a;
+      /*
       console.log("가공 전 SpO2 배열 : ", testJson.spo2_data.spo2);
       console.log("--- SpO2 Data 90 미만 제거 후 평균값 가공 ---");
-      console.log(
-        "가공 후 SpO2 평균값 : ",
-        parseInt(testavgspo2 / spo2ValueCount)
-      );
+      console.log("가공 후 SpO2 평균값 : ", parseInt(spo2Sum / spo2ValueCount));
+      */
+      // SpO2 Data 90 미만 제거 후 평균 계산
+      const refactoringSpo2 = (arr) => {
+        const spo2Sort = arr?.sort(sortArray);
+        const count = spo2Sort.length;
+        var spo2ValueCount = 0;
+        var spo2Sum = 0;
+        if (count <= 5) {
+          delete spo2Sort[0];
+          delete spo2Sort[count - 1];
+          console.log(spo2Sort);
+          for (var i = 0; i < count; i++) {
+            if (spo2Sort[i] > 89) {
+              spo2Sum += spo2Sort[i];
+              spo2ValueCount++;
+            }
+          }
+          return parseInt(spo2Sum / spo2ValueCount);
+        } else {
+          delete spo2Sort[0];
+          const deleteNum = count - 5;
+          for (var i = 1; i < deleteNum; i++) {
+            delete arr[count - i];
+          }
+          for (var i = 0; i < 5; i++) {
+            if (spo2Sort[i] > 89) {
+              spo2Sum += spo2Sort[i];
+              spo2ValueCount++;
+            }
+          }
+          console.log(spo2Sort);
+          console.log(spo2Sum);
+          return parseInt(spo2Sum / spo2ValueCount);
+        }
+      };
+      console.log(refactoringSpo2(testJson?.spo2_data?.spo2));
+      /*
       // bp 상위 5개 값 평균 계산하기
-      const sortBp = (a, b) => b - a;
       const arrayAverage = (arr) => {
         var sum = 0;
         var numbersCnt = 0;
@@ -50,12 +76,12 @@ export default {
         }
         return sum / numbersCnt;
       };
-      const bpUpSort = testJson.bp_data.bp[0].sort(sortBp);
-      const bpDownSort = testJson.bp_data.bp[1].sort(sortBp);
+      const bpUpSort = testJson.bp_data.bp[0].sort(sortArray);
+      const bpDownSort = testJson.bp_data.bp[1].sort(sortArray);
       console.log("--- 가공전 BP 배열 ---");
       console.log(bpUpSort);
       console.log(bpDownSort);
-      const deleteArray = (arr) => {
+      const refactoringBP = (arr) => {
         const count = arr?.length;
         if (count <= 5) {
           delete arr[0];
@@ -76,8 +102,9 @@ export default {
           return arr;
         }
       };
-      console.log(parseInt(arrayAverage(deleteArray(bpUpSort))));
-      console.log(parseInt(arrayAverage(deleteArray(bpDownSort))));
+      console.log(parseInt(arrayAverage(refactoringBP(bpUpSort))));
+      console.log(parseInt(arrayAverage(refactoringBP(bpDownSort))));
+      */
       // 원복 지점
       if (username === loggedInUser.username) {
         const spo2API = axios.create({
