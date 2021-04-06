@@ -32,15 +32,18 @@ model User {
 }
 
 model Spo2 {
-  id        Int      @id @default(autoincrement())
-  user      User     @relation(fields: [userId], references: [id])
-  userId    Int
-  minSpo2   Float
-  avgSpo2   Float
-  maxSpo2   Float
-  bpUp      Int[]
-  bpDown    Int[]
-  createdAt DateTime @default(now())
+  id           Int      @id @default(autoincrement())
+  user         User     @relation(fields: [userId], references: [id])
+  userId       Int
+  minSpo2      Float
+  avgSpo2      Float
+  maxSpo2      Float
+  avgSpo2_Sort Int?
+  bpUp         Int[]
+  bpUp_Sort    Int?
+  bpDown       Int[]
+  bpDown_Sort  Int?
+  createdAt    DateTime @default(now())
 }
 
 model Photo {

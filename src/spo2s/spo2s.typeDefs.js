@@ -7,8 +7,11 @@ export default gql`
     minSpo2: Float!
     avgSpo2: Float!
     maxSpo2: Float!
+    avgSpo2_Sort: Int
     bpUp: [Int]
+    bpUp_Sort: Int
     bpDown: [Int]
+    bpDown_Sort: Int
     createdAt: String!
     isMine: Boolean!
   }
