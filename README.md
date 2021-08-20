@@ -1,6 +1,6 @@
-# Instaclone
+# HAI-BackEnd
 
-Instagram Clone Backend
+HAI Final Project Back End API
 
 ## User:
 
@@ -16,18 +16,14 @@ Instagram Clone Backend
 - [x] Computed Fields
 - [x] Search Users
 
-## Photo: 
+## SpO2: 
 
-- [x] Upload Photo
-- [x] see Photo
+- [x] upload SpO2
+- [x] see SpO2
 - [x] see Hashtags
-- [x] search Photo
-- [x] Edit Photo
-- [x] Like / Unlike Photo
-- [x] see Photo Likes
-- [x] see Photo Comments
-- [x] See Feed
-- [x] isMine (Delete Photo)
+- [x] delect SpO2
+- [x] See Feed (home SpO2 card)
+- [x] isMine (Delete SpO2)
 
 ## comment:
 - [x] Comment on Photo
@@ -37,7 +33,7 @@ Instagram Clone Backend
 ## AWS S3 Upload:
 - [x] AWS S3 Image Upload
 
-## Direct Messages
+## Direct Messages (제거 예정)
 - [x] See Rooms
 - [x] Send Message (Create Room)
 - [x] See Room
